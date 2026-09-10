@@ -1,0 +1,148 @@
+{
+  "name": "Fish Flight Entertainment",
+  "version": "1.0.0",
+  "description": "Design tokens for the Fish Flight Entertainment brand: colors, typography, and logo asset references.",
+  "color": [
+    {
+      "name": "ff-teal",
+      "label": "Fish Flight Teal",
+      "hex": "#125C77",
+      "rgb": "rgb(18, 92, 119)",
+      "usage": "Primary brand accent. Used for the 'ENTERTAINMENT' wordmark, the FF monogram, links, and small accent details. Pair with black or white, not with each other's near-tones."
+    },
+    {
+      "name": "ff-black",
+      "label": "Fish Flight Black",
+      "hex": "#000000",
+      "rgb": "rgb(0, 0, 0)",
+      "usage": "Primary background and primary text-on-light color. The default brand surface — most logo lockups are built to sit on black."
+    },
+    {
+      "name": "ff-white",
+      "label": "Fish Flight White",
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "usage": "Primary text-on-dark color and secondary background. Used for the 'FISH FLIGHT' headline wordmark on dark lockups."
+    }
+  ],
+  "typography": {
+    "headline": {
+      "role": "Display / headline",
+      "fontFamily": "'Archivo Black', 'Arial Black', sans-serif",
+      "googleFont": "Archivo Black",
+      "weight": 900,
+      "letterSpacing": "0em",
+      "textTransform": "uppercase",
+      "usage": "Bold, condensed block letterforms echoing 'FISH FLIGHT' in the primary wordmark. Headlines and hero statements only."
+    },
+    "subhead": {
+      "role": "Subhead / label",
+      "fontFamily": "'Jost', 'Futura', sans-serif",
+      "googleFont": "Jost",
+      "weight": 500,
+      "letterSpacing": "0.12em",
+      "textTransform": "uppercase",
+      "usage": "Lighter, letter-spaced companion to the headline face, echoing 'ENTERTAINMENT' under the wordmark. Section labels, nav, eyebrows."
+    },
+    "body": {
+      "role": "Body copy",
+      "fontFamily": "'Jost', 'Helvetica Neue', Arial, sans-serif",
+      "googleFont": "Jost",
+      "weight": 400,
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "usage": "Long-form copy, story text, captions."
+    }
+  },
+  "logo": [
+    {
+      "file": "Fishflight_logo.jpg",
+      "variant": "primary-stacked",
+      "background": "light",
+      "description": "Full color stacked lockup (monogram + wordmark) on a light/white ground.",
+      "minWidthPx": 120
+    },
+    {
+      "file": "Fishflight_logo_ALPHA.png",
+      "variant": "primary-stacked-transparent",
+      "background": "any (transparent)",
+      "description": "Full color stacked lockup with transparent background. Preferred for placing on brand-black surfaces.",
+      "minWidthPx": 120
+    },
+    {
+      "file": "Fishflight_logo_ALPHA_Black_Text.png",
+      "variant": "primary-stacked-dark-text",
+      "background": "light (transparent)",
+      "description": "Stacked lockup with black wordmark text and transparent background, for light surfaces.",
+      "minWidthPx": 120
+    },
+    {
+      "file": "Fishflight_logo_horizontal.jpg",
+      "variant": "horizontal",
+      "background": "dark",
+      "description": "Horizontal lockup (monogram beside wordmark) on black. Use where vertical space is limited, e.g. headers.",
+      "minWidthPx": 160
+    },
+    {
+      "file": "Fishflight_logo_crop.jpg",
+      "variant": "primary-stacked-cropped",
+      "background": "dark",
+      "description": "Tightly cropped stacked lockup on black.",
+      "minWidthPx": 120
+    },
+    {
+      "file": "Fishflight_logo_icon_alpha.png",
+      "variant": "icon",
+      "background": "any (transparent)",
+      "description": "FF monogram only, no wordmark, transparent background. Use for small/square placements (app icons, avatars, favicons).",
+      "minWidthPx": 32
+    },
+    {
+      "file": "Fishflight_logo_icon_alpha_BW.png",
+      "variant": "icon-bw",
+      "background": "any (transparent)",
+      "description": "FF monogram only, black & white, transparent background. Use for single-color/print-restricted contexts.",
+      "minWidthPx": 32
+    },
+    {
+      "file": "Fishflight_logo_BW.jpg",
+      "variant": "primary-stacked-bw",
+      "background": "light",
+      "description": "Full stacked lockup in black & white. Use where color reproduction isn't available.",
+      "minWidthPx": 120
+    },
+    {
+      "file": "Fishflight_logo_crop_128x128.png",
+      "variant": "icon-favicon",
+      "background": "any (transparent)",
+      "description": "Pre-cropped monogram icon, 128x128.",
+      "minWidthPx": 128
+    },
+    {
+      "file": "Fishflight_logo_crop_48x48.png",
+      "variant": "icon-favicon",
+      "background": "any (transparent)",
+      "description": "Pre-cropped monogram icon, 48x48.",
+      "minWidthPx": 48
+    },
+    {
+      "file": "Fishflight_logo_crop_32x32.png",
+      "variant": "icon-favicon",
+      "background": "any (transparent)",
+      "description": "Pre-cropped monogram icon, 32x32.",
+      "minWidthPx": 32
+    },
+    {
+      "file": "Fishflight_logo_crop_16x16.png",
+      "variant": "icon-favicon",
+      "background": "any (transparent)",
+      "description": "Pre-cropped monogram icon, 16x16.",
+      "minWidthPx": 16
+    }
+  ],
+  "voice": {
+    "keywords": ["pioneering", "independent", "boutique", "craft-focused", "adventurous", "community-rooted"],
+    "summary": "Fish Flight Entertainment writes like industry veterans who chose passion over routine: confident, a little irreverent, proud of its Vancouver film-industry roots, and unafraid to describe ambitious bets in plain, vivid language ('jump off the cliff and build our wings on the way down').",
+    "originStory": "Named for the legendary 5am YVR-to-LAX 'Fish Flight' that once carried fresh seafood and, in the analog era of Hollywood North, film reels of VFX and animation footage for same-day studio feedback. Founded by Paul Furminger and Sabrina Furminger, Fish Flight Entertainment is a boutique studio with roots across TV, film, and gaming, now focused on gaming and interactive entertainment. It is the parent company of YVR Screen Scene, a digital magazine and podcast covering the Vancouver film and television industry."
+  }
+}

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fish Flight Entertainment — Brand Kit</title>
+<meta name="description" content="Brand kit for Fish Flight Entertainment: logos, color palette, typography, voice, and downloadable design tokens.">
+<link rel="icon" type="image/png" sizes="32x32" href="Fishflight_logo_crop_32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Fishflight_logo_crop_16x16.png">
+<link rel="apple-touch-icon" sizes="128x128" href="Fishflight_logo_crop_128x128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --white:#ffffff;
+    --teal:#125C77;
+    --teal-light:#2f89ab;
+    --surface:#0a0a0a;
+    --card:#141414;
+    --border:#262626;
+    --muted:#9a9a9a;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--black);
+    color:var(--white);
+    font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:0.01em;margin:0;}
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.28em;
+    color:var(--teal-light);
+    font-size:0.75rem;
+  }
+
+  /* nav */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(0,0,0,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+  }
+  header.site .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:14px;padding-bottom:14px;
+    gap:16px;flex-wrap:wrap;
+  }
+  .brand-mark{display:flex;align-items:center;gap:10px;font-family:'Archivo Black',sans-serif;font-size:0.95rem;letter-spacing:0.02em;}
+  .brand-mark img{height:32px;width:auto;}
+  .brand-mark .sub{color:var(--teal-light);}
+  nav.links{display:flex;gap:22px;flex-wrap:wrap;}
+  nav.links a{
+    font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;
+    text-decoration:none;color:var(--muted);
+  }
+  nav.links a:hover{color:var(--white);}
+
+  /* hero */
+  .hero{
+    padding:100px 0 80px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(18,92,119,0.25), transparent 60%);
+  }
+  .hero img.mark{width:180px;margin:0 auto 28px;}
+  .hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;}
+  .hero h1 .accent{color:var(--teal-light);}
+  .hero p.lede{
+    max-width:640px;margin:22px auto 0;color:var(--muted);
+    font-size:1.05rem;
+  }
+
+  section{padding:80px 0;border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{margin-bottom:40px;max-width:760px;}
+  .section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-top:10px;}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1rem;}
+
+  /* story */
+  .story-body{max-width:760px;font-size:1.08rem;color:#d8d8d8;}
+  .story-body p{margin:0 0 20px;}
+  .story-body p:first-of-type::first-letter{
+    font-family:'Archivo Black',sans-serif;
+    font-size:3.2rem;
+    float:left;line-height:0.8;
+    margin:8px 10px 0 0;
+    color:var(--teal-light);
+  }
+  blockquote.pull{
+    border-left:3px solid var(--teal);
+    margin:36px 0;padding:4px 0 4px 24px;
+    font-family:'Archivo Black',sans-serif;
+    font-size:1.4rem;line-height:1.35;
+    text-transform:none;color:var(--white);
+  }
+
+  /* logo grid */
+  .logo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px,1fr));
+    gap:24px;
+  }
+  .logo-card{
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--card);
+    display:flex;flex-direction:column;
+  }
+  .logo-card .swatch{
+    aspect-ratio:4/3;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .logo-card .swatch img{max-height:100%;object-fit:contain;}
+  .swatch.bg-light{background:#ffffff;}
+  .swatch.bg-dark{background:#000000;}
+  .logo-card .meta{padding:16px 18px 18px;border-top:1px solid var(--border);}
+  .logo-card .meta h3{
+    font-family:'Jost',sans-serif;font-weight:600;text-transform:none;
+    font-size:0.98rem;letter-spacing:0;margin-bottom:4px;
+  }
+  .logo-card .meta p{margin:0 0 12px;color:var(--muted);font-size:0.85rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--teal-light);color:var(--teal-light);
+    text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;
+    padding:9px 14px;border-radius:6px;transition:background 0.15s,color 0.15s;
+  }
+  .btn:hover{background:var(--teal);color:var(--white);}
+  .btn.solid{background:var(--teal);color:var(--white);border-color:var(--teal);}
+  .btn.solid:hover{background:var(--teal-light);}
+
+  .guide-notes{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;}
+  .guide-notes .note{
+    flex:1 1 220px;
+    border:1px solid var(--border);border-radius:10px;padding:18px 20px;
+    background:var(--card);font-size:0.9rem;color:var(--muted);
+  }
+  .guide-notes .note strong{display:block;color:var(--white);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+
+  /* colors */
+  .color-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+  .color-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card);}
+  .color-swatch{height:120px;}
+  .color-info{padding:16px 18px;}
+  .color-info h3{font-family:'Jost',sans-serif;font-weight:600;text-transform:none;font-size:1rem;margin-bottom:8px;}
+  .color-info button.copy{
+    display:block;width:100%;text-align:left;
+    background:none;border:none;color:var(--muted);
+    font-family:'Jost',monospace,sans-serif;font-size:0.85rem;
+    padding:3px 0;cursor:pointer;
+  }
+  .color-info button.copy:hover{color:var(--teal-light);}
+  .color-info p.usage{color:var(--muted);font-size:0.82rem;margin:10px 0 0;}
+
+  /* typography */
+  .type-specimen{
+    border:1px solid var(--border);border-radius:10px;background:var(--card);
+    padding:28px 28px 24px;margin-bottom:20px;
+  }
+  .type-specimen .tag{font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+  .type-specimen .sample-headline{font-family:'Archivo Black',sans-serif;font-size:clamp(1.6rem,4vw,2.6rem);}
+  .type-specimen .sample-subhead{font-family:'Jost',sans-serif;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal-light);font-size:1rem;margin-top:10px;}
+  .type-specimen .sample-body{font-family:'Jost',sans-serif;font-weight:400;font-size:1rem;color:#d8d8d8;margin-top:14px;max-width:60ch;}
+  .type-specimen .facts{margin-top:16px;color:var(--muted);font-size:0.82rem;}
+
+  /* voice */
+  .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+  .chip{
+    border:1px solid var(--teal);color:var(--teal-light);
+    padding:8px 16px;border-radius:999px;font-size:0.82rem;
+    letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .voice-summary{max-width:760px;color:#d8d8d8;font-size:1.05rem;}
+
+  /* downloads */
+  .dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+  .dl-card{border:1px solid var(--border);border-radius:10px;background:var(--card);padding:22px;}
+  .dl-card h3{font-family:'Jost',sans-serif;font-weight:600;text-transform:none;font-size:1.02rem;margin-bottom:8px;}
+  .dl-card p{color:var(--muted);font-size:0.88rem;margin:0 0 16px;}
+  .dl-card.pending{opacity:0.75;}
+  .dl-card.pending p.note{color:var(--teal-light);font-size:0.78rem;margin-top:14px;margin-bottom:0;}
+
+  footer{padding:48px 0 64px;text-align:center;color:var(--muted);font-size:0.85rem;}
+  footer img{height:26px;margin:0 auto 16px;}
+  footer a{color:var(--teal-light);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+
+  @media (max-width:640px){
+    section{padding:56px 0;}
+    .hero{padding:72px 0 56px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand-mark">
+      <img src="Fishflight_logo_icon_alpha.png" alt="Fish Flight Entertainment mark">
+      <span>FISH FLIGHT <span class="sub">BRAND KIT</span></span>
+    </div>
+    <nav class="links">
+      <a href="#story">Story</a>
+      <a href="#logos">Logos</a>
+      <a href="#color">Color</a>
+      <a href="#type">Type</a>
+      <a href="#voice">Voice</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <img class="mark" src="Fishflight_logo_ALPHA.png" alt="Fish Flight Entertainment logo">
+    <h1>The Fish Flight <span class="accent">Brand Kit</span></h1>
+    <p class="lede">Everything needed to build, write, and design as Fish Flight Entertainment — logos, color, typography, voice, and machine-readable design tokens, all in one place.</p>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Origin</span>
+      <h2>What is a Fish Flight?</h2>
+    </div>
+    <div class="story-body">
+      <p>Imagine a 5&nbsp;am plane departing from Vancouver every morning, laden with freshly-caught fish destined for eager Los Angeles restaurants before the sun rises. This was the legendary Fish Flight, the earliest direct connection from YVR to LAX. But it was more than just a flight; it was a symbol of our industry's pioneering spirit.</p>
+      <p>In the analog era of Hollywood North, before digital deliveries and lightning-fast transfer speeds, the Fish Flight carried more than just seafood. It transported the lifeblood of the Vancouver film industry: film reels filled with the latest footage, destined for the eyes of Hollywood executives. In those early days of VFX and animation, it was our lifeline, ferrying film-outs so supervisors and directors could provide feedback on the same day the footage was sent for review.</p>
+      <blockquote class="pull">We're not afraid to jump off the cliff and build our wings on the way down.</blockquote>
+      <p>Today, Fish Flight Entertainment stands as a testament to that same spirit of innovation and dedication. Founded by Paul Furminger and Sabrina Furminger, our boutique studio rejects the 9 to 5 grind in favor of a passion-fueled existence. We're industry veterans with a diverse background spanning TV, film, and gaming. Now, we're laser-focused on gaming because we believe in the power of immersion and interactivity to shape the future of entertainment.</p>
+      <p>At Fish Flight Entertainment, we thrive on pushing boundaries and embracing the unknown. After all, who knows? That old fish with improvised wings may just soar.</p>
+      <p>As the parent company of YVR Screen Scene, a digital magazine and podcast celebrating the Vancouver film and television industry, Fish Flight Entertainment is deeply rooted in the heartbeat of our community.</p>
+    </div>
+  </div>
+</section>
+
+<section id="logos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Identity</span>
+      <h2>Logo usage</h2>
+      <p>The FF monogram pairs with a bold "FISH FLIGHT" headline and a letter-spaced "ENTERTAINMENT" subhead in teal. Choose the variant built for the background you're placing it on — don't recolor or skew the mark.</p>
+    </div>
+
+    <div class="logo-grid">
+      <div class="logo-card">
+        <div class="swatch bg-dark"><img src="Fishflight_logo_ALPHA.png" alt="Primary stacked logo, transparent, for dark backgrounds"></div>
+        <div class="meta">
+          <h3>Primary — transparent</h3>
+          <p>For dark surfaces. Min width 120px.</p>
+          <a class="btn" href="Fishflight_logo_ALPHA.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="swatch bg-light"><img src="Fishflight_logo_ALPHA_Black_Text.png" alt="Primary stacked logo, black text, for light backgrounds"></div>
+        <div class="meta">
+          <h3>Primary — light background</h3>
+          <p>Black wordmark, transparent. Min width 120px.</p>
+          <a class="btn" href="Fishflight_logo_ALPHA_Black_Text.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="swatch bg-dark"><img src="Fishflight_logo_horizontal.jpg" alt="Horizontal logo lockup"></div>
+        <div class="meta">
+          <h3>Horizontal lockup</h3>
+          <p>For constrained vertical space, e.g. headers. Min width 160px.</p>
+          <a class="btn" href="Fishflight_logo_horizontal.jpg" download>Download JPG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="swatch bg-dark"><img src="Fishflight_logo_icon_alpha.png" alt="FF monogram icon only"></div>
+        <div class="meta">
+          <h3>Icon only</h3>
+          <p>Monogram, no wordmark. Square/small placements. Min width 32px.</p>
+          <a class="btn" href="Fishflight_logo_icon_alpha.png" download>Download PNG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="swatch bg-light"><img src="Fishflight_logo_BW.jpg" alt="Black and white logo"></div>
+        <div class="meta">
+          <h3>Black &amp; white</h3>
+          <p>Single-color / print-restricted contexts.</p>
+          <a class="btn" href="Fishflight_logo_BW.jpg" download>Download JPG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="swatch bg-dark"><img src="Fishflight_logo_icon_alpha_BW.png" alt="FF monogram icon, black and white"></div>
+        <div class="meta">
+          <h3>Icon — black &amp; white</h3>
+          <p>Monogram only, single color, transparent.</p>
+          <a class="btn" href="Fishflight_logo_icon_alpha_BW.png" download>Download PNG</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-notes">
+      <div class="note"><strong>Clear space</strong>Keep at least the height of one "F" stroke of clear space around the mark on every side.</div>
+      <div class="note"><strong>Minimum size</strong>Never scale the wordmark lockup below 120px wide, or the icon below 16px.</div>
+      <div class="note"><strong>Don't</strong>Recolor the mark, stretch/skew it, or place it on backgrounds close to teal (#125C77) — contrast fails.</div>
+    </div>
+  </div>
+</section>
+
+<section id="color">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Palette</span>
+      <h2>Color</h2>
+      <p>Black is the default brand surface. Teal is the single accent — used sparingly against black or white. Click a value to copy it.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#125C77;"></div>
+        <div class="color-info">
+          <h3>Fish Flight Teal</h3>
+          <button class="copy" data-copy="#125C77">#125C77</button>
+          <button class="copy" data-copy="rgb(18, 92, 119)">rgb(18, 92, 119)</button>
+          <p class="usage">Wordmark accent, links, small details.</p>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#000000;border-bottom:1px solid var(--border);"></div>
+        <div class="color-info">
+          <h3>Fish Flight Black</h3>
+          <button class="copy" data-copy="#000000">#000000</button>
+          <button class="copy" data-copy="rgb(0, 0, 0)">rgb(0, 0, 0)</button>
+          <p class="usage">Primary background.</p>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#ffffff;"></div>
+        <div class="color-info">
+          <h3>Fish Flight White</h3>
+          <button class="copy" data-copy="#FFFFFF">#FFFFFF</button>
+          <button class="copy" data-copy="rgb(255, 255, 255)">rgb(255, 255, 255)</button>
+          <p class="usage">Primary text on dark, secondary background.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Typeset</span>
+      <h2>Typography</h2>
+      <p>A bold block headline face paired with a lighter, letter-spaced companion — the same relationship as "FISH FLIGHT" and "ENTERTAINMENT" in the wordmark.</p>
+    </div>
+
+    <div class="type-specimen">
+      <div class="tag">Headline — Archivo Black</div>
+      <div class="sample-headline">Build wings on the way down</div>
+      <div class="facts">Weight 900 · Uppercase · Headlines &amp; hero statements only</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="tag">Subhead / label — Jost 500</div>
+      <div class="sample-subhead">Entertainment · Since the 5am Flight</div>
+      <div class="facts">Letter-spacing 0.12em · Uppercase · Section labels, nav, eyebrows</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="tag">Body — Jost 400</div>
+      <p class="sample-body">Fish Flight Entertainment is a boutique studio with roots across TV, film, and gaming, now focused on the power of immersion and interactivity to shape the future of entertainment.</p>
+      <div class="facts">Regular weight · Sentence case · Long-form copy &amp; captions</div>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Tone</span>
+      <h2>Voice</h2>
+    </div>
+    <div class="chip-row">
+      <span class="chip">Pioneering</span>
+      <span class="chip">Independent</span>
+      <span class="chip">Boutique</span>
+      <span class="chip">Craft-focused</span>
+      <span class="chip">Adventurous</span>
+      <span class="chip">Community-rooted</span>
+    </div>
+    <p class="voice-summary">Fish Flight Entertainment writes like industry veterans who chose passion over routine: confident, a little irreverent, proud of its Vancouver film-industry roots, and unafraid to describe ambitious bets in plain, vivid language. Avoid corporate-speak, hedging, and generic "innovative synergy" language — it undersells the risk-taking self-image.</p>
+  </div>
+</section>
+
+<section id="downloads">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Kit</span>
+      <h2>Downloads</h2>
+      <p>Machine-readable brand data for tools and AI agents.</p>
+    </div>
+    <div class="dl-grid">
+      <div class="dl-card">
+        <h3>Design tokens (JSON)</h3>
+        <p>Color, typography, and logo-file references in a flat, tool-friendly JSON file.</p>
+        <a class="btn solid" href="design-tokens.json" download>Download design-tokens.json</a>
+      </div>
+      <div class="dl-card">
+        <h3>Claude Code brand skill</h3>
+        <p>A Claude Code Skill that teaches an agent to apply this brand automatically when generating copy or assets.</p>
+        <a class="btn solid" href=".claude/skills/fish-flight-brand/SKILL.md" download>Download SKILL.md</a>
+      </div>
+      <div class="dl-card pending">
+        <h3>Packaged release</h3>
+        <p>A single zip with all logo files, tokens, and the skill, versioned as a GitHub Release.</p>
+        <p class="note">Coming soon — check the repo's Releases page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="Fishflight_logo_icon_alpha.png" alt="Fish Flight Entertainment mark">
+    <div>Fish Flight Entertainment — Brand Kit</div>
+    <div>Parent company of YVR Screen Scene · <a href="https://www.fishflightentertainment.com/" target="_blank" rel="noopener">fishflightentertainment.com</a></div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('button.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var value = btn.getAttribute('data-copy');
+      var original = btn.textContent;
+      function done(ok){
+        btn.textContent = ok ? 'Copied ✓' : original;
+        setTimeout(function(){ btn.textContent = original; }, 1200);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(value).then(function(){done(true);}, function(){done(false);});
+      } else {
+        done(false);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
